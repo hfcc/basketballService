@@ -4,7 +4,7 @@
       "name": "basketballservice",
       "domain": "",
       "ip": "",
-      "containerId": "4c2f01756a32ac70be5ac6f9340afe0af9e5d7f2a9ebea64acad5e352da2d685"
+      "containerId": "b31c45d347fad7f4e569113e0c4e7a3fb9c58758f6ccc986fe1870b4e080c984"
     }
   ],
   "config": {
@@ -27,15 +27,11 @@
           "PolicyThreshold": 60
         }
       ],
-      /** "envParams": {
-        "MYSQL_USERNAME": "root",
-        "MYSQL_PASSWORD": "19861020aHfcc",
-        "MYSQL_ADDRESS": "sh-cynosdbmysql-grp-5yds6c7s.sql.tencentcdb.com:22508"
-      }, **/
       "envParams": {
         "MYSQL_USERNAME": "root",
-        "MYSQL_PASSWORD": "19861020a",
-        "MYSQL_ADDRESS": "localhost:3306"
+        "MYSQL_PASSWORD": "19861020aHfcc",
+        "MYSQL_ADDRESS": "sh-cynosdbmysql-grp-5yds6c7s.sql.tencentcdb.com:22508",
+        "MYSQL_DATABASE": "basketball"
       },
       "customLogs": "stdout",
       "dataBaseName": "golang_demo",
