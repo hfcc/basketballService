@@ -12,7 +12,8 @@ func Getschedules() (map[string][]model.ScheduleModel, error) {
 		return nil, err
 	}
 	schedulesInDay := lo.GroupBy(schedules, func (schedule model.ScheduleModel) string  {
-		return schedule.StartTimeUTC.Format("2006-01-02")
+	  startTimeLocal := schedule.StartTimeUTC.Local()
+		return startTimeLocal.Format("2006-01-02")
 	})
 	return schedulesInDay, nil
 }
