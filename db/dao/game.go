@@ -14,5 +14,5 @@ func Getschedules() ([]model.ScheduleModel, error) {
 }	
 func InsertSchedule(schedules []model.ScheduleModel) {
 	cli := db.Get()
-	cli.Table("schedule").CreateInBatches(schedules, 1500)
+	cli.Table("schedule").CreateInBatches(&schedules, 1500)
 }

@@ -20,6 +20,21 @@ func main() {
       "err": err,
 		})
 	})
+	r.POST("/login", func(c *gin.Context) {
+		openIds := c.Request.Header["X-Wx-Openid"]
+		if (len(openIds) == 0) {
+			c.JSON(200, gin.H{
+				"userInfo": nil,
+			})
+			return
+		}
+		openId := openIds[0]
+		userInfo, err := service.NewUser(openId)
+		c.JSON(200, gin.H{
+			"userInfo": userInfo,
+			"err": err,
+		})
+	})
 	r.Run()
 }
 
