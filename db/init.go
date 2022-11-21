@@ -19,6 +19,9 @@ func Init() error {
 	user := os.Getenv("MYSQL_USERNAME")
 	pwd := os.Getenv("MYSQL_PASSWORD")
 	addr := os.Getenv("MYSQL_ADDRESS")
+	// user := "root"// os.Getenv("MYSQL_USERNAME")
+	// pwd := "19861020aHfcc"//os.Getenv("MYSQL_PASSWORD")
+	// addr := "sh-cynosdbmysql-grp-5yds6c7s.sql.tencentcdb.com:22508"// os.Getenv("MYSQL_ADDRESS")
 	dataBase := os.Getenv("MYSQL_DATABASE")
 	if dataBase == "" {
 		dataBase = "basketball"

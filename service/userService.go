@@ -17,3 +17,7 @@ func NewUser(openId string) (model.UserModel, error) {
 	dao.InsertUser(userInfo)
 	return userInfo, nil
 }
+func GetUserByOpenId(openId string) (model.UserModel, error) {
+	userInfo, err := dao.SelectUserByOpenId(openId)
+	return userInfo, err
+}
